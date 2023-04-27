@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YOLO- Player Detection</title>
+    <link rel="stylesheet" type="text/css" href="../static/index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="../static/index.js"></script>
+  </head>
+  <body>
+    <div class="App">
+      <header class="App-header">
+        <h1><u> Player Identification with YOLOv3 Custom Data </u></h1>
+        <br>
+        <p>Bring a Players picture infront of WebCam for detection</p>
+        <form method="post" action="/mainCam" enctype="multipart/form-data">
+        <button name="cam" class="button" id="opencam">Video Cam</button>
+      </form>
+        <br/>
+        <hr class="line" />
+        <form method="post" action="/main" enctype="multipart/form-data">
+          <p>Upload test images of players in test_images folder for detection</p>
+          <input type="file" id="ctrl" name="image" webkitdirectory directory multiple/>
+          <button type="submit" name="send" class="button" id="sendbutton">Send</button>
+          <p>'Press q to move to next image'</p>
+        </form>
+        <br/>
+        <hr class="line" />
+        <div class="container">
+          <a href="download.html" id="download"></a>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
